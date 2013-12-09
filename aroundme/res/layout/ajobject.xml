@@ -1,0 +1,162 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="6dip" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:id="@+id/titleTable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/serviceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service:"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/serviceText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(name)"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/objectTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Object:"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/objectText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(name)"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/ownerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Owner:"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/ownerText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(ID)"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Divider -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/white" />
+
+        <!-- Sub-Objects and Interfaces -->
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="6dip" >
+
+            <!-- List of Interfaces -->
+
+            <TextView
+                android:id="@+id/interfaceListTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ownerTitle"
+                android:text="Interfaces:"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ListView
+                android:id="@+id/interfaceList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/interfaceListTitle"
+                android:layout_weight="1.0"
+                android:padding="16dip"
+                android:stackFromBottom="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:transcriptMode="alwaysScroll" />
+
+            <!-- Divider -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_below="@+id/interfaceList"
+                android:background="@color/white" />
+
+            <!-- List of Child Objects -->
+
+            <TextView
+                android:id="@+id/objectListTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/interfaceList"
+                android:text="Child Objects:"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ListView
+                android:id="@+id/objectList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/objectListTitle"
+                android:layout_weight="1.0"
+                android:padding="16dip"
+                android:stackFromBottom="false"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:transcriptMode="alwaysScroll" />
+
+            <!-- Divider -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_below="@+id/objectList"
+                android:background="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

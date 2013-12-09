@@ -1,0 +1,59 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/interfaceTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dip"
+        android:text="Interface:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <View
+        android:id="@+id/div01"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/white" />
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:transcriptMode="alwaysScroll" >
+
+        <TextView
+            android:id="@+id/interfaceDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="4dip"
+            android:text="Interface Description:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dip"
+        android:text="\n(Press Back key to exit)\n"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>

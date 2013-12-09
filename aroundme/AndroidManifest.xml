@@ -1,0 +1,227 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.alljoyn.aroundme"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- PERMISSIONS -->
+    <!-- Permission required to use the TCP transport -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- Permission required to use the Bluetooth transport -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- Permissions for reading contacts, phone state, saving files -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="15" />
+
+    <!-- Note the theme. This is to workaround some Android SDK version differences. -->
+    <!-- Check res/values/styles.xml and res/values-v11/styles.xml -->
+
+    <application
+        android:icon="@drawable/aroundme"
+        android:label="@string/main_title"
+        android:launchMode="singleTask"
+        android:theme="@style/Theme.MyTheme" >
+
+        <!-- ACTIVITIES -->
+
+
+        <!-- ======== -->
+        <!-- MAIN APP -->
+        <!-- ======== -->
+
+
+        <!-- Activity to get things going -->
+        <activity
+            android:name=".MainApp.StartupActivity"
+            android:label="@string/main_title"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.PROFILE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity to synchronise startup -->
+        <activity
+            android:name="org.alljoyn.profileloader.TopLevelActivity"
+            android:icon="@drawable/aroundme"
+            android:label="@string/main_title"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.TOP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- The Activity to load profile info about the user -->
+        <activity
+            android:name="org.alljoyn.profileloader.ProfileLoaderActivity"
+            android:label="@string/profile_title"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.LOADPROFILE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        
+        <!-- Activity to manage the overall UI -->
+        <!-- Note that all Intents go to this activity, which then delegates to the appropriate Fragment -->
+        <activity
+            android:name=".MainApp.UiManagerActivity"
+            android:label="@string/main_title"
+            android:screenOrientation="portrait" >
+
+            <intent-filter>
+               <action android:name="org.alljoyn.aroundme.FRONTPAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            </activity>
+        
+
+
+
+
+        <!-- Activity to monitor local debug log -->
+        <activity
+            android:name=".Debug.LogOutput.DebugLogActivity"
+            android:label="Local Debug Log"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.DEBUGLOG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Activity to browse available services -->
+        <activity
+            android:name=".Debug.ServiceBrowser.AllJoynBrowser"
+            android:label="Service Browser"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.SVCBROWSER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- The Activity to display a particular Object -->
+
+        <activity
+            android:name=".Debug.ServiceBrowser.AJObject"
+            android:label="Object Details" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.SVCBROWSER.OBJECT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- The Activity to display a particular Interface -->
+
+        <activity
+            android:name=".Debug.ServiceBrowser.AJInterface"
+            android:label="Interface Details"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.SVCBROWSER.INTERFACE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- The Activity to select an app -->
+        <activity
+            android:name=".RemoteMedia.AppSelectActivity"
+            android:label="Select Application"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.SELECTAPP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ 
+ 
+        <!-- Activity to define new group -->
+        <activity
+            android:name=".Groups.EditGroupActivity"
+            android:label="Define/Edit Group"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.EDITGROUP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity to edit the members of a group -->
+        <activity
+            android:name=".Groups.SelectMembersActivity"
+            android:label="Select Group Members"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.SELECTMEMBERS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ 
+        <!-- Run Self-Test on known/available groups -->
+        <activity
+            android:name=".Groups.GroupTestActivity"
+            android:label="Group Self-Test"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="org.alljoyn.aroundme.GROUPTEST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Background Service -->
+        <service android:name="org.alljoyn.devmodules.service.CoreService" >
+            <intent-filter>
+                <action android:name="org.alljoyn.devmodules.ALLJOYNSERVICES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

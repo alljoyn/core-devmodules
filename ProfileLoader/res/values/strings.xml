@@ -1,0 +1,114 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<resources>
+
+<!-- General titles and display text -->
+    <string name="app_name">AroundMe 5.5</string>
+	<string name="version">v5.6 (New Service framework)</string>
+	<string name="hello">Hello World, AroundMe!</string>
+	<string name="main_title">AroundMe</string>
+	<string name="lists_title">AroundMe - Lists</string>
+	<string name="prefs_title">AroundMe - My Preferences</string>
+	<string name="details_title">AroundMe - Contact Details</string>
+	<string name="contact_title">AroundMe Contact Details</string>
+	<string name="about_title">AroundMe - An AllJoyn(TM) Sample Application</string>
+	<string name="profile_title">AroundMe - My AroundMe</string>
+
+	
+	
+	<string name="about_text">
+	\n\n
+	AroundMe is an AllJoyn(TM) sample application that 
+	detects other users nearby and provides various ways to interact with each other.
+	
+	\n\n
+	To run this app, you must designate a contact whose information provides a \"Profile\" for identifying yourself to other users. 
+	\n
+	The information in the contact need not be accurate or real, it can be an \"alias\"
+	</string>
+
+<string name="splash_title">AroundMe</string>
+
+	<string name="splash_text">
+		AroundMe is an AllJoyn(TM) sample application that 
+	detects other users nearby and provides various ways to interact with each other.
+	\n\n
+	Before use, you need to establish a profile that represents this device (user) and
+	you do that by selecting a Contact from your address book.
+	\n\n
+	(Press Back key to exit or wait a few seconds)
+	</string>
+
+	<string name="profile_setup_text">
+		\n
+		To use this app, you need to first identify a contact that will be used
+		as your identity.\n
+		It does not have to really be you, it can be any contact. The name,
+		number, photo etc.
+		will be taken from the contact entry.
+		\n
+		\n
+</string>
+
+	<string name="acceptInstructions">
+		\n
+		Accepted items will be available to the normal media viewers.
+		\n
+		Rejected items will be deleted.
+		\n
+</string>
+
+	<string name="memberInstructionsText">
+		\n
+		Set the cheeckbox to include users. Clear it to exclude them
+		\n
+</string>
+	
+	<string name="sendInstructions">
+		\nTouch the icon for the type of media that you want to send to the user displayed above,
+		and press the Send or Cancel button.
+</string>
+	    	    
+	<string name="bustext">
+\n\n
+Temporary activity to set up test data
+\n\n
+Also runs AllJoyn services (will move to a background Service eventually)
+\n
+</string>
+
+	<string name="ok">OK</string>
+	<string name="Save">save</string>
+	<string name="Cancel">cancel</string>
+	    
+<!-- Strings for contact fields -->
+	<string name="accountSpinnerLabel">Account</string>
+	<string name="addContactButtonLabel">Add Contact</string>
+	<string name="addContactTitle">Add Contact</string>
+	<string name="allAccounts">All Accounts</string>
+	<string name="contactCreationFailure">Contact creation failed, check logs.</string>
+	<string name="contactEmailLabel">Email</string>
+	<string name="contactNameLabel">Name</string>
+	<string name="contactPhoneLabel">Phone</string>
+	<string name="save">Save</string>
+	<string name="cancel">Cancel</string>
+	<string name="selectAccountLabel">Select</string>
+	<string name="selectLabel">Select label</string>
+	<string name="showInvisible">Show Invisible Contacts (Only)</string>
+	<string name="targetAccountLabel">Target Account</string>
+	<string name="undefinedTypeLabel">(Undefined)</string>
+    
+</resources>

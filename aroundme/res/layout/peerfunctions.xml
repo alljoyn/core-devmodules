@@ -1,0 +1,122 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="4dip"
+    android:layout_marginRight="4dip"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="vertical"
+    android:showDividers="middle" >
+
+
+
+    <!-- Header containing contact details of 'active' remote peer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Selected User:"
+            android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/peerHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_weight="2.0" >
+
+        <ImageView
+            android:id="@+id/peerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dip"
+            android:contentDescription="Thumbnail"
+            android:gravity="right|top"
+            android:minHeight="48dip"
+            android:minWidth="48dip"
+            android:scaleType="centerCrop" />
+        
+        <TextView
+            android:id="@+id/peerNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/peerIcon"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="(Number)"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/peerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/peerNumber"
+           android:layout_alignParentLeft="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toLeftOf="@id/peerIcon"
+            android:gravity="center_vertical"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip"
+            android:text="(Id)"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/peerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/peerIcon"
+            android:gravity="top"
+            android:text="(Name)"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/peerDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8.0" 
+        android:orientation="vertical">
+
+    <!-- Divider -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_margin="8dip"
+        android:background="@color/white"
+        android:padding="4dip" />
+        
+        <!-- General frame for displaying user-specific displays -->
+
+        <FrameLayout
+            android:id="@+id/user_display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

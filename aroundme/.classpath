@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry excluding="org/alljoyn/aroundme/Utilities.java|org/alljoyn/aroundme/RemoteMedia/SendMediaActivity.java|org/alljoyn/aroundme/Peers/CurrentContactsActivity.java|org/alljoyn/aroundme/Peers/PeerFunctionsActivity.java|org/alljoyn/aroundme/Peers/PeerDetailsActivity.java|org/alljoyn/aroundme/MainApp/FrontPageActivity.java|org/alljoyn/aroundme/RemoteMedia/RemoteAppsActivity.java|org/alljoyn/aroundme/RemoteMedia/RemoteMediaActivity.java|org/alljoyn/aroundme/RemoteMedia/RemoteMusicActivity.java|org/alljoyn/aroundme/RemoteMedia/RemotePhotosActivity.java|org/alljoyn/aroundme/RemoteMedia/RemoteVideosActivity.java|org/alljoyn/aroundme/RemoteMedia/RemoteDebugActivity.java|org/alljoyn/aroundme/RemoteMedia/RemoteKeyEventActivity.java|org/alljoyn/aroundme/Transactions/TransactionsActivity.java|org/alljoyn/aroundme/Transactions/TransactionsGenericActivity.java|org/alljoyn/aroundme/Transactions/TransactionsReceivedActivity.java|org/alljoyn/aroundme/Debug/DebugFunctionsActivity.java|org/alljoyn/aroundme/Groups/GroupListActivity.java|org/alljoyn/aroundme/MainApp/MainTabActivity.java|org/alljoyn/aroundme/Chat/ChatListActivity.java|org/alljoyn/aroundme/Chat/ChatRoomActivity.java" kind="src" path="src"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

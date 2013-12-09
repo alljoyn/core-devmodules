@@ -1,0 +1,269 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <!-- Contact info header -->
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="96dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bordered" >
+
+        <ImageView
+            android:id="@+id/contactIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="12dip"
+            android:contentDescription="Thumbnail"
+            android:gravity="left|top"
+            android:minHeight="96dip"
+            android:minWidth="96dip"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/contactNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/contactIcon"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="(Number)"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/contactId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/contactNumber"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toRightOf="@id/contactIcon"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip"
+            android:text="(Id)"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/contactIcon"
+            android:gravity="top"
+            android:text="(Name)"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Navigation buttons -->
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/btn01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dip"
+            android:orientation="horizontal"
+            android:padding="2dip"
+            android:paddingTop="16dip" >
+
+            <ImageView
+                android:id="@+id/btn01_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="icon"
+                android:gravity="left|center"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/btn01_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:hint="(Description)"
+                android:minHeight="48dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dip"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/btn02_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="icon"
+                android:gravity="left|center"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/btn02_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:hint="(Description)"
+                android:minHeight="48dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn03"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dip"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/btn03_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="icon"
+                android:gravity="left|center"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/btn03_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:hint="(Description)"
+                android:minHeight="48dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn04"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dip"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/btn04_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="icon"
+                android:gravity="left|center"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/btn04_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:hint="(Description)"
+                android:minHeight="48dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn05"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dip"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/btn05_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="icon"
+                android:gravity="left|center"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/btn05_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:hint="(Description)"
+                android:minHeight="48dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Gallery display -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="1.0"
+        android:gravity="bottom|center_horizontal" >
+
+        <Gallery
+            android:id="@+id/gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bordered"
+            android:gravity="bottom|center_horizontal"
+            android:minHeight="64dip"
+            android:padding="2dip" />
+    </LinearLayout>
+
+</LinearLayout>

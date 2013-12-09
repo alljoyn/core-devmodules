@@ -1,0 +1,216 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dip" >
+
+    <!-- First Row -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:orientation="horizontal"
+        android:padding="0dip" >
+
+        <!-- Contact info header -->
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="60dip"
+            android:layout_weight="2.0"
+            android:background="@drawable/stroked" >
+
+            <ImageView
+                android:id="@+id/contactIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="4dip"
+                android:contentDescription="Thumbnail"
+                android:gravity="left|top"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/contactNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/contactIcon"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="(Number)"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/contactId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/contactNumber"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@id/contactIcon"
+                android:gravity="center_vertical"
+                android:paddingBottom="2dip"
+                android:paddingTop="2dip"
+                android:text="(Id)"
+                android:textSize="8sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/contactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/contactIcon"
+                android:gravity="top"
+                android:text="(Name)"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Grid showing detected users -->
+
+        <LinearLayout
+            android:id="@+id/users"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/stroked"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/usersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="Nearby:"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <!-- android:transcriptMode="alwaysScroll" -->
+            
+            <GridView
+                android:id="@+id/usersGrid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:columnWidth="28dip"
+                android:gravity="center"
+                android:horizontalSpacing="2dip"
+                android:numColumns="auto_fit"
+                android:padding="2dip"
+                android:stackFromBottom="false"
+                android:stretchMode="columnWidth"
+                 android:verticalSpacing="2dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Row 2 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroked"
+        android:orientation="horizontal" >
+
+        <!-- Users Indicator -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <TextView
+                android:id="@+id/userTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Users: "
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/userCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <!-- Group Indicator -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <TextView
+                android:id="@+id/groupTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Groups: "
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/groupCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <!-- WiFi Indicator -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:padding="2dip" >
+
+            <TextView
+                android:id="@+id/wifiTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="WiFi: "
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/wifiSSID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="none"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

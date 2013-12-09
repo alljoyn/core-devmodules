@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="org/alljoyn/services/connector/profile/ProfileData.java|org/alljoyn/services/connector/profile/|org/alljoyn/services/callbacks/_backupCallbackObject.java|org/alljoyn/services/callbacks/|org/alljoyn/services/connector/APICore.java|org/alljoyn/services/connector/APILoader.java|org/alljoyn/services/connector/CoreAPIInterface.java|org/alljoyn/services/api/notify/|org/alljoyn/services/api/chat/|org/alljoyn/services/api/whiteboard/|org/alljoyn/services/api/groupchat/|org/alljoyn/services/api/remotekey/|org/alljoyn/services/api/remotedevice/|org/alljoyn/services/api/sharedclock/|org/alljoyn/services/api/TEMPLATE/" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SessionManager"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

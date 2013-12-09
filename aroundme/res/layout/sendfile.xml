@@ -1,0 +1,209 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+       android:orientation="vertical"
+     android:padding="6dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8.0"
+        android:orientation="vertical"
+        android:scrollbars="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Send Media"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- File Type Options -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Media Type:"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnPhotos"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_alignParentTop="true"
+                android:layout_margin="2dip"
+                android:background="@color/aj_grid_mid_red"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/ic_dialog_pik"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:padding="2dip"
+                android:text="Photos"
+                android:textColor="@color/white"
+                android:textSize="10dip" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnMusic"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_margin="2dip"
+                android:layout_toRightOf="@id/btnPhotos"
+                android:background="@color/aj_grid_mid_orange"
+                android:drawableTop="@drawable/ic_dialog_music"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:padding="2dip"
+                android:text="Music"
+                android:textColor="@color/white"
+                android:textSize="10dip" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnVideos"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_margin="2dip"
+                android:layout_toRightOf="@id/btnMusic"
+                android:background="@color/aj_grid_mid_indigo"
+                android:drawableTop="@drawable/ic_dialog_movies"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:padding="2dip"
+                android:text="Videos"
+                android:textColor="@color/white"
+                android:textSize="10dip" >
+            </Button>
+
+            <Button
+                android:id="@+id/btnApps"
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:layout_below="@id/btnPhotos"
+                android:layout_margin="2dip"
+                android:background="@color/aj_grid_mid_green"
+                android:drawableTop="@drawable/ic_dialog_applications"
+                android:minHeight="48dip"
+                android:minWidth="48dip"
+                android:padding="2dip"
+                android:text="Apps"
+                android:textColor="@color/white"
+                android:textSize="10dip" >
+            </Button>
+        </LinearLayout>
+
+        <!-- Views for display of selected photo -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/imageIcon"
+                android:layout_width="?android:attr/listPreferredItemHeight"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dip"
+                android:gravity="left|top"
+                android:maxHeight="?android:attr/listPreferredItemHeight"
+                android:maxWidth="?android:attr/listPreferredItemHeight"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_toRightOf="@+id/imageIcon"
+                android:ellipsize="marquee"
+                android:paddingBottom="8dip"
+                android:singleLine="true"
+                android:text="line 3"
+                android:textSize="12sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/line1"
+                android:layout_toRightOf="@+id/imageIcon"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="line 2"
+                android:textSize="12sp"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@+id/imageIcon"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="line 1"
+                android:textSize="14sp"
+                android:typeface="sans" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sendInstructions"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Accept/Reject buttons -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="1.0"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Send" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

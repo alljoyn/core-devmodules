@@ -1,0 +1,346 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- Icon -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Icon:"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/contactIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dip"
+                android:gravity="left" />
+        </TableRow>
+
+        <!-- Name -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Name:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(Name)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- Number -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Number:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(Number)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- RealNumber -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Real Number:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactRealNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(RealNumber)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- Email -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Email:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(Email)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- PObox -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Number/PO Box:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactPObox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(PObox)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- Street -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Street:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactStreet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(Street)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- City -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="City:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(City)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- State -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="State:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(State)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- PostalCode -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Postal Code:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactPostalCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(PostalCode)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- Country -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Country:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(Country)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- Type -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="Type:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="(Type)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- ContactURI -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:text="URI:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/contactURI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:gravity="left"
+                android:singleLine="false"
+                android:text="(URI)"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <!-- Save/Cancel Buttons -->
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/contactSaveButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/contactCancelButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/cancel" />
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

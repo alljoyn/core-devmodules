@@ -1,0 +1,166 @@
+<!--
+Copyright (c) 2013, AllSeen Alliance. All rights reserved.
+
+   Permission to use, copy, modify, and/or distribute this software for any
+   purpose with or without fee is hereby granted, provided that the above
+   copyright notice and this permission notice appear in all copies.
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+   WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+   MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+   ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+   WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+   ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dip" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <!-- Buttons for each function -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn01"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_alignParentTop="true"
+                android:background="@color/aj_grid_mid_red"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #1"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn02"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_margin="4dip"
+                android:layout_toRightOf="@id/btn01"
+                android:background="@color/aj_grid_mid_orange"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #2"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn03"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_toRightOf="@id/btn02"
+                android:background="@color/aj_grid_mid_indigo"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #3"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn04"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_below="@id/btn01"
+                android:background="@color/aj_grid_mid_green"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #4"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn05"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_below="@id/btn02"
+                android:layout_toRightOf="@id/btn04"
+                android:background="@color/aj_grid_mid_blue"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #5"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn06"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_below="@id/btn03"
+                android:layout_toRightOf="@id/btn05"
+                android:background="@color/aj_grid_mid_cyan"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #6"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn07"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_below="@id/btn04"
+                android:background="@color/aj_grid_mid_violet"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #7"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn08"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_below="@id/btn05"
+                android:layout_toRightOf="@id/btn07"
+                android:background="@color/aj_grid_mid_yellow"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #8"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+
+            <Button
+                android:id="@+id/btn09"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_below="@id/btn06"
+                android:layout_toRightOf="@id/btn08"
+                android:background="@color/aj_grid_mid_magenta"
+                android:minHeight="64dip"
+                android:minWidth="64dip"
+                android:padding="4dip"
+                android:text="Button #9"
+                android:layout_margin="4dip"
+                android:textColor="@color/white" >
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

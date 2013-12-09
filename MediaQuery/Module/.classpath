@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="org/alljoyn/services/mediaquery/MediaQueryClient.java|org/alljoyn/services/mediaquery/MediaQueryControlService.java|org/alljoyn/services/mediaquery/MediaQueryReference.java|org/alljoyn/services/mediaquery/MediaQueryGlobalData.java|org/alljoyn/services/mediaquery/MediaIdentifier.java|org/alljoyn/services/mediaquery/MediaCache.java|org/alljoyn/services/mediaquery/MediaIdentifierDescriptor.java|org/alljoyn/services/mediaquery/MediaQueryCache.java|org/alljoyn/services/mediaquery/MediaQueryResult.java|org/alljoyn/services/mediaquery/MediaQueryResultDescriptor.java|org/alljoyn/services/mediaquery/MediaQueryService.java|org/alljoyn/services/mediaquery/MediaTransactionCache.java|org/alljoyn/services/mediaquery/MediaUtilities.java|org/alljoyn/services/mediaquery/PhotoInterface.java|org/alljoyn/services/mediaquery/PhotoService.java|org/alljoyn/services/mediaquery/ThumbnailCache.java|org/alljoyn/services/mediaquery/TransactionListDescriptor.java|org/alljoyn/services/mediaquery/FileIdentifier.java|org/alljoyn/services/mediaquery/MediaQueryCallback.java|org/alljoyn/services/mediaquery/MediaQueryControlInterface.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FileTransfer"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
